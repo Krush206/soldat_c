@@ -1,3 +1,6 @@
+#ifndef WEAPONS_H
+#define WEAPONS_H
+
 #define EAGLE 0
 #define MP5 1
 #define AK74 2
@@ -113,3 +116,5 @@ extern int calculate_bink(int, int);
 extern int weapon_num_internal_to_external(int);
 extern int weapon_num_external_to_internal(int);
 extern char *alloc_weapon_name(char *);
+
+#endif /* WEAPONS_H */
