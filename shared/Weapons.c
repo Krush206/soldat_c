@@ -3,7 +3,34 @@
 #include <string.h>
 #include <math.h>
 
+#ifndef GFX_WEAPONS_SOCOM_BULLET
+#define GFX_WEAPONS_SOCOM_BULLET 0
+#endif
+#ifndef BULLET_STYLE_THROWNKNIFE
+#define BULLET_STYLE_THROWNKNIFE BULLET_STYLE_THROWKNIFE
+#endif
+#ifndef GRENADE_TIMEOUT
+#define GRENADE_TIMEOUT 180
+#endif
+#ifndef FLAME_TIMEOUT
+#define FLAME_TIMEOUT 90
+#endif
+#ifndef MELEE_TIMEOUT
+#define MELEE_TIMEOUT 30
+#endif
+#ifndef M2BULLET_TIMEOUT
+#define M2BULLET_TIMEOUT 180
+#endif
+#ifndef BULLET_TIMEOUT
+#define BULLET_TIMEOUT 180
+#endif
+
 #include "Weapons.h"
+#include "GfxData.h"
+
+TGun guns[TOTAL_WEAPONS];
+TGun defaultguns[TOTAL_WEAPONS];
+unsigned int defaultwmchecksum, loadedwmchecksum;
 
 void create_weapons(int realistic)
 {
